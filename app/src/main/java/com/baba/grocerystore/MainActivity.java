@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Hello, Baba");
+        getSupportActionBar().setTitle("Hi, Baba");
 
 
         final HomeFragment homeFragment = new HomeFragment();

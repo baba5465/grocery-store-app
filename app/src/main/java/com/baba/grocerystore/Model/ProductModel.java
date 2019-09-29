@@ -1,4 +1,4 @@
-package com.baba.grocerystore;
+package com.baba.grocerystore.Model;
 
 public class ProductModel {
     private int productImage;

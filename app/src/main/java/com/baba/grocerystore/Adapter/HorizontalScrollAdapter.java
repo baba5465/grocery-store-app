@@ -1,6 +1,5 @@
-package com.baba.grocerystore;
+package com.baba.grocerystore.Adapter;
 
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,12 +9,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import com.baba.grocerystore.Model.ProductModel;
+import com.baba.grocerystore.R;
+
 import java.util.List;
 
 public class HorizontalScrollAdapter extends RecyclerView.Adapter<HorizontalScrollAdapter.ViewHolder> {
 
-    List<ProductModel> productModel = new ArrayList<>();
+    List<ProductModel> productModel;
 
     public HorizontalScrollAdapter(List<ProductModel> productModel) {
         this.productModel = productModel;
