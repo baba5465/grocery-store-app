@@ -22,8 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/apple" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/hor_scr_pro_price"
@@ -46,8 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="madar"
-        android:textSize="18dp"
         android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hor_scr_pro_image" />

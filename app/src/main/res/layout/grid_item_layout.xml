@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="#ffffff"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
@@ -25,7 +26,7 @@
         android:id="@+id/grid_item_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginBottom="8dp"
         android:text="Rs. 25/-"
         android:textAlignment="center"
@@ -34,17 +35,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grid_item_name"/>
+        app:layout_constraintTop_toBottomOf="@+id/grid_item_name" />
+
     <TextView
         android:id="@+id/grid_item_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="madar"
-        android:textSize="18dp"
         android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="8sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grid_item_image"/>
+        app:layout_constraintTop_toBottomOf="@+id/grid_item_image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

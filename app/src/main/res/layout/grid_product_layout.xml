@@ -13,7 +13,7 @@
         android:id="@+id/grid_pro_layout_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dry Fruits"
+        android:text="Snacks"
         android:textColor="#000"
         android:textSize="18dp"
         android:textStyle="bold"
@@ -25,7 +25,8 @@
     <GridView
         android:id="@+id/grid_pro_layout_grid_view"
         android:layout_width="0dp"
-        android:layout_height="559dp"
+        android:layout_height="502dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:horizontalSpacing="1dp"
         android:numColumns="3"

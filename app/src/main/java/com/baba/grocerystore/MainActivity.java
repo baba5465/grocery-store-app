@@ -11,6 +11,8 @@ import android.view.MenuItem;
 
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,9 +24,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String firstName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName().split(" ")[0];
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Hi, Baba");
+        getSupportActionBar().setTitle("Hi, "+ firstName);
 
 
         final HomeFragment homeFragment = new HomeFragment();

@@ -1,5 +1,6 @@
 package com.baba.grocerystore.Adapter;
 
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.baba.grocerystore.Model.ProductModel;
 import com.baba.grocerystore.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -31,9 +33,10 @@ public class HorizontalScrollAdapter extends RecyclerView.Adapter<HorizontalScro
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.productImage.setImageResource(productModel.get(position).getProductImage());
-        holder.productName.setText(productModel.get(position).getProductName());
-        holder.productPrice.setText(productModel.get(position).getProductPrice());
+        //Picasso.get().load(productModel.get(position).getImageUrl()).into(holder.productImage);
+        holder.loadImage(productModel.get(position).getImageurl());
+        holder.productName.setText(productModel.get(position).getItemname());
+        holder.productPrice.setText("Rs."+productModel.get(position).getItemprice()+"/-");
     }
 
     @Override
@@ -54,6 +57,9 @@ public class HorizontalScrollAdapter extends RecyclerView.Adapter<HorizontalScro
             productPrice = itemView.findViewById(R.id.hor_scr_pro_price);
             productName = itemView.findViewById(R.id.hor_scr_pro_name);
 
+        }
+        private void loadImage(String img){
+            Picasso.get().load(img).into(productImage);
         }
     }
 }

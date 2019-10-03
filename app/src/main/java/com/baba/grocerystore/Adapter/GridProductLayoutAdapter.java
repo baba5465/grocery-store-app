@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.baba.grocerystore.Model.ProductModel;
 import com.baba.grocerystore.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class GridProductLayoutAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 9;
+        return gridProductModelList.size();
     }
 
     @Override
@@ -43,9 +44,9 @@ public class GridProductLayoutAdapter extends BaseAdapter {
             ImageView productImage = view1.findViewById(R.id.grid_item_image);
             TextView productName = view1.findViewById(R.id.grid_item_name);
             TextView productPrice = view1.findViewById(R.id.grid_item_price);
-            productImage.setImageResource(gridProductModelList.get(i).getProductImage());
-            productName.setText(gridProductModelList.get(i).getProductName());
-            productPrice.setText(gridProductModelList.get(i).getProductPrice());
+            Picasso.get().load(gridProductModelList.get(i).getImageurl()).into(productImage);
+            productName.setText(gridProductModelList.get(i).getItemname());
+            productPrice.setText("Rs."+gridProductModelList.get(i).getItemprice()+"/-");
         }else {
             view1 = view;
         }

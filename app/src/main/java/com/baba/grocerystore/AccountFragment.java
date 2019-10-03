@@ -53,7 +53,7 @@ public class AccountFragment extends Fragment {
         ImageView UserImage = view.findViewById(R.id.acc_user_image);
         Username.setText(firebaseUser.getDisplayName());
         Email.setText(firebaseUser.getEmail());
-        Picasso.get().load(firebaseUser.getPhotoUrl()).into(UserImage);
+        Picasso.get().load(firebaseUser.getPhotoUrl()).transform(new CircleTransform()).into(UserImage);
         addListItem();
         final ListView listView = view.findViewById(R.id.acc_list_view);
 

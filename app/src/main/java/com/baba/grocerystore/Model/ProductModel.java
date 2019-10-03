@@ -1,28 +1,62 @@
 package com.baba.grocerystore.Model;
 
 public class ProductModel {
-    private int productImage;
-    private String productPrice;
-    private String productName;
+    String itemname,itemprice,imageurl,category,itemid;
 
-    public ProductModel(int productImage, String productPrice, String productName) {
-        this.productImage = productImage;
-        this.productPrice = productPrice;
-        this.productName = productName;
+    public ProductModel(String itemname, String itemprice, String imageurl, String category, String itemid) {
+        this.itemname = itemname;
+        this.itemprice = itemprice;
+        this.imageurl = imageurl;
+        this.category = category;
+        this.itemid = itemid;
+    }
+
+    public ProductModel(String itemname, String itemprice, String imageurl) {
+        this.itemname = itemname;
+        this.itemprice = itemprice;
+        this.imageurl = imageurl;
     }
 
     public ProductModel() {
     }
 
-    public int getProductImage() {
-        return productImage;
+    public String getItemname() {
+        return itemname;
     }
 
-    public String getProductPrice() {
-        return productPrice;
+    public void setItemname(String itemname) {
+        this.itemname = itemname;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getItemprice() {
+        return itemprice;
+    }
+
+    public void setItemprice(String itemprice) {
+        this.itemprice = itemprice;
+    }
+
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getItemid() {
+        return itemid;
+    }
+
+    public void setItemid(String itemid) {
+        this.itemid = itemid;
     }
 }

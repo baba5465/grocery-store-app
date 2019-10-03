@@ -24,9 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class CategoryFragment extends Fragment {
 
     ListView listViewCategory;
@@ -44,28 +41,28 @@ public class CategoryFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_category, container, false);
         listViewCategory = view.findViewById(R.id.listview_category);
         addItem();
-        AccountListAdapter adapter = new AccountListAdapter(getContext(),R.layout.acc_list_item,listModelsCategory);
+        AccountListAdapter adapter = new AccountListAdapter(getContext(), R.layout.acc_list_item, listModelsCategory);
         listViewCategory.setAdapter(adapter);
         listViewCategory.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                startActivity(new Intent(getContext(), CategoryItemActivity.class).putExtra("Number",i));
             }
         });
         return view;
     }
 
-    private void addItem(){
+    private void addItem() {
         listModelsCategory.clear();
-        listModelsCategory.add(new AccountListModel(0,"Fruits & Vegetables"));
-        listModelsCategory.add(new AccountListModel(0,"Foodgrains, Oil & Masala"));
-        listModelsCategory.add(new AccountListModel(0,"Bakery, Cakes & Dairy"));
-        listModelsCategory.add(new AccountListModel(0,"Beverages"));
-        listModelsCategory.add(new AccountListModel(0,"Snacks"));
-        listModelsCategory.add(new AccountListModel(0,"Beauty"));
-        listModelsCategory.add(new AccountListModel(0,"Household"));
-        listModelsCategory.add(new AccountListModel(0,"Kitchen"));
-        listModelsCategory.add(new AccountListModel(0,"Baby Care"));
+        listModelsCategory.add(new AccountListModel(0, "Fruits & Vegetables"));
+        listModelsCategory.add(new AccountListModel(0, "Foodgrains, Oil & Masala"));
+        listModelsCategory.add(new AccountListModel(0, "Bakery, Cakes & Dairy"));
+        listModelsCategory.add(new AccountListModel(0, "Beverages"));
+        listModelsCategory.add(new AccountListModel(0, "Snacks"));
+        listModelsCategory.add(new AccountListModel(0, "Beauty"));
+        listModelsCategory.add(new AccountListModel(0, "Household"));
+//        listModelsCategory.add(new AccountListModel(0,"Kitchen"));
+//        listModelsCategory.add(new AccountListModel(0,"Baby Care"));
     }
 
 }
