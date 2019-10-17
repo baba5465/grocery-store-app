@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         final HomeFragment homeFragment = new HomeFragment();
         final CategoryFragment categoryFragment = new CategoryFragment();
         final AccountFragment accountFragment = new AccountFragment();
-        final SearchFragment searchFragment = new SearchFragment();
+        //final SearchFragment searchFragment = new SearchFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,homeFragment).commit();
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -48,9 +48,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.category:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,categoryFragment).commit();
                         return true;
-                    case R.id.search:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,searchFragment).commit();
-                        return true;
+//                    case R.id.search:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,searchFragment).commit();
+//                        return true;
                     case R.id.account:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,accountFragment).commit();
                         return true;

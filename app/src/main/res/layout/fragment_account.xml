@@ -22,7 +22,7 @@
             android:text="MY ACCOUNT"
             android:textAlignment="center"
             android:textColor="#2C3335"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
@@ -57,7 +57,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:text="Username"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Email Id"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"

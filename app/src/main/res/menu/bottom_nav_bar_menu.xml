@@ -12,10 +12,10 @@
         android:icon="@drawable/category"
         android:title="Category"/>
 
-    <item android:id="@+id/search"
-        app:showAsAction="always"
-        android:icon="@drawable/search"
-        android:title="Search"/>
+<!--    <item android:id="@+id/search"-->
+<!--        app:showAsAction="always"-->
+<!--        android:icon="@drawable/search"-->
+<!--        android:title="Search"/>-->
 
     <item android:id="@+id/account"
         app:showAsAction="always"

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.baba.grocerystore.Adapter.CategoryAdapter;
 import com.baba.grocerystore.Adapter.GridProductLayoutAdapter;
@@ -42,6 +43,23 @@ public class CategoryItemActivity extends AppCompatActivity {
 
         recyclerViewConfig();
         getItemFromDatabase();
+
+        recyclerView.addOnItemTouchListener(
+                new RecyclerItemClickListener(getApplicationContext(), recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override public void onItemClick(View view, int position) {
+                        Intent intent1 = new Intent(getApplicationContext(), AddToCartActivity.class);
+                        intent1.putExtra("Name" , productModelList.get(position).getItemname());
+                        intent1.putExtra("Price" , productModelList.get(position).getItemprice());
+                        intent1.putExtra("Image" , productModelList.get(position).getImageurl());
+                        intent1.putExtra("Id" , productModelList.get(position).getItemid());
+                        startActivity(intent1);
+                    }
+
+                    @Override public void onLongItemClick(View view, int position) {
+                        // do whatever
+                    }
+                })
+        );
     }
     private void recyclerViewConfig(){
         recyclerView = findViewById(R.id.cat_rec_view);
@@ -58,7 +76,7 @@ public class CategoryItemActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot data : dataSnapshot.getChildren()){
                     ProductModel pm = data.getValue(ProductModel.class);
-                    productModelList.add(new ProductModel(pm.getItemname(),pm.getItemprice(),pm.getImageurl()));
+                    productModelList.add(new ProductModel(pm.getItemname(),pm.getItemprice(),pm.getImageurl(), pm.getItemid()));
                 }
                 categoryAdapter = new CategoryAdapter(productModelList);
                 recyclerView.setAdapter(categoryAdapter);

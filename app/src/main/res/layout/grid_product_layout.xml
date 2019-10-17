@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/item_background_layout"
-    android:padding="5dp"
+    android:paddingBottom="8dp"
     android:layout_margin="8dp">
 
 
@@ -15,9 +15,9 @@
         android:layout_height="wrap_content"
         android:text="Snacks"
         android:textColor="#000"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/grid_pro_layout_view_all"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent" />
@@ -35,19 +35,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/grid_pro_layout_view_all"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="81dp"
+        android:id="@+id/grid_pro_layout_view_all"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/button"
         android:text="View All"
         android:textColor="#fff"
-        android:textSize="12dp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

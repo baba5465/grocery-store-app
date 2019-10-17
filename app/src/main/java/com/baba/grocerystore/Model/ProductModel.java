@@ -11,10 +11,11 @@ public class ProductModel {
         this.itemid = itemid;
     }
 
-    public ProductModel(String itemname, String itemprice, String imageurl) {
+    public ProductModel(String itemname, String itemprice, String imageurl, String itemid) {
         this.itemname = itemname;
         this.itemprice = itemprice;
         this.imageurl = imageurl;
+        this.itemid = itemid;
     }
 
     public ProductModel() {
